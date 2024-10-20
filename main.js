@@ -42,14 +42,14 @@ scene.add(pointLight);
 
 // HDRI Lights
 const rgbeLoader = new RGBELoader();
-rgbeLoader.load('./hdri_lights2.hdr', (texture) => {
+rgbeLoader.load('/hdri_lights2.hdr', (texture) => {
   texture.mapping = THREE.EquirectangularReflectionMapping;
   scene.environment = texture;
 });
 
 // 3d model
 const loader = new GLTFLoader();
-loader.load('./old_computer.glb', (gltf)=>{
+loader.load('/old_computer.glb', (gltf)=>{
   scene.add(gltf.scene)
 })
 
